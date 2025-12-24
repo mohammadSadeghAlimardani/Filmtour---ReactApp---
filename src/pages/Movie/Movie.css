@@ -1,0 +1,22 @@
+.movie-center {
+    padding: 6rem 0;
+}
+.movie-center img {
+    width: 65%;
+    height: auto;
+}
+@media screen and (max-width: 768px) {
+    .movie-center img {
+        width: 100%;
+    }
+}
+.movie-center h1 {
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.movie-center p.overview {
+    line-height: 1.4;
+    text-align: justify;
+    font-size: clamp(0.87rem, 2.5vw, 1rem);
+}

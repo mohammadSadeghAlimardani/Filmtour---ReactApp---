@@ -1,0 +1,53 @@
+.navbar {
+    background-color: var(--main-bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+.nav-center {
+    padding: 1rem 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+.nav-center h1 {
+    font-weight: bold;
+    font-family: "Exo2-Regular";
+    text-transform: capitalize;
+    color: var(--color-white);
+}
+.nav-center h1 span {
+    color: var(--color-blue);
+}
+.nav-center ul {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.nav-center ul a {
+    text-transform: capitalize;
+    color: var(--color-white);
+}
+.nav-center ul a:hover {
+    color: var(--color-yellow);
+}
+.nav-center .register-btn {
+    justify-self: flex-end;
+}
+.nav-center .profile-btn {
+    justify-self: flex-end;
+    font-size: 2rem;
+    color: var(--color-white);
+}
+
+@media screen and (max-width: 567px) {
+    .nav-center {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav-center ul {
+        display: none;
+    }
+}

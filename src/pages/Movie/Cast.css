@@ -1,0 +1,26 @@
+.movie-center .cast {
+    margin-bottom: 2rem;
+}
+.movie-center .cast .cast-people {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.movie-center .cast .cast-people .cast-person {
+    text-align: center;
+}
+.movie-center .cast .cast-people .cast-person img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-bottom: 0.25rem;
+}
+.movie-center .cast .cast-people .cast-person h5 {
+    color: var(--color-black);
+}
+.movie-center .cast .cast-btn {
+    font-family: "Roboto-Regular";
+    color: var(--color-dark-gray);
+}

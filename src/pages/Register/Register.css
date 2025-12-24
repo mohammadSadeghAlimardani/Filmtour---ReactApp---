@@ -1,0 +1,63 @@
+.register-center {
+    padding-top: 4rem;
+    max-width: 480px;
+    text-align: center;
+}
+.register-center .toggle-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--color-light-gray);
+    border-radius: 2rem;
+    padding: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+.register-center .toggle-btns button {
+    width: 100%;
+    font-family: "OpenSans-Regular";
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    color: var(--color-blue-gray);
+    border-radius: 2.25rem;
+    justify-self: center;
+    transition: background-color 0.5s;
+}
+.register-center .toggle-btns button.active {
+    color: var(--color-white);
+    background-color: var(--color-blue);
+}
+.register-center .form section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+    border: 2px solid var(--color-light-gray);
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+}
+.register-center .form section input {
+    border: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.register-center .form section input:focus {
+    outline: none;
+}
+.register-center .form section input::placeholder {
+    font-family: "OpenSans-Regular";
+}
+.register-center .form section button {
+    font-size: 1.2rem;
+}
+.register-center .form .form-btn {
+    font-family: "OpenSans-Regular";
+    font-size: 1rem;
+    text-transform: capitalize;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}

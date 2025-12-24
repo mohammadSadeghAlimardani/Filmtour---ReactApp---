@@ -1,0 +1,22 @@
+.character {
+    font-family: "Rubik-Regular";
+}
+.character-center {
+    padding: 6rem 0;
+}
+.character-center img {
+    width: auto;
+    height: 15rem;
+}
+.character-center h1 {
+    margin: 1rem 0;
+}
+.character-center h3 {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+.character-center p {
+    line-height: 1.4;
+    font-size: clamp(0.87rem, 2.5vw, 1rem);
+    text-align: justify;
+}

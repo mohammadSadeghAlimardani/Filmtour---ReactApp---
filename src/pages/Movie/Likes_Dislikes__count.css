@@ -1,0 +1,20 @@
+.movie-center .likes-dislikes__count {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+.movie-center .likes-dislikes__count article {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+.movie-center .likes-dislikes__count article button {
+    font-size: 1.5rem;
+}
+.movie-center .likes-dislikes__count article .like-btn {
+    color: var(--color-green);
+}
+.movie-center .likes-dislikes__count article .dislike-btn {
+    color: var(--color-red);
+}

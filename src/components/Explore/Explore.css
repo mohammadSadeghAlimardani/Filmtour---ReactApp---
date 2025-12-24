@@ -1,0 +1,29 @@
+.explore-center {
+    padding: 2rem 0;
+}
+.explore-center form {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 2rem auto;
+    width: 80%;
+}
+@media screen and (max-width: 567px) {
+    .explore-center form {
+        width: 100%;
+    }
+}
+.explore-center form input {
+    width: 100%;
+    background-color: #f6f6f6;
+    border: 2px solid #f2f2f2;
+    box-shadow: none;
+    padding: 0.625rem 1rem;
+    border-radius: 1rem;
+}
+.explore-center form input:focus {
+    outline: none;
+}
+.explore-center form input::placeholder {
+    font-family: "Roboto-Regular";
+}

@@ -1,0 +1,41 @@
+.profile-center {
+    padding: 6rem 0;
+}
+.profile-center header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.profile-center header img {
+    width: 7rem;
+}
+.profile-center header section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.profile-center .profile-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+.profile-center .profile-links a {
+    color: var(--color-blue);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    text-transform: capitalize;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+.profile-center .profile-links a svg {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+.profile-center .log-out-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+.profile-center .log-out-btn svg {
+    font-size: 1.5rem;
+}

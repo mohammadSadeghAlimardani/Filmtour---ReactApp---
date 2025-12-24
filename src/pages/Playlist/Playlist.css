@@ -1,0 +1,19 @@
+.playlist-center {
+    padding: 6rem 0;
+}
+.playlist-center .bookmark a img {
+    width: 100%;
+}
+.playlist-center .bookmark ul {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.playlist-center .bookmark ul h3 {
+    color: var(--color-black);
+}
+.playlist-center .bookmark ul button svg {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    color: var(--color-red);
+}

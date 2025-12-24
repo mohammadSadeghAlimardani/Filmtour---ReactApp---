@@ -1,0 +1,38 @@
+.genres {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 567px) {
+    .genres {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.genres .genre {
+    background-color: var(--color-light-gray);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+.genres .genre span {
+    font-size: clamp(2rem, 1.5vw, 3rem);
+}
+.genres .genre div {
+    display: flex;
+    gap: 0.375rem;
+    flex-direction: column;
+}
+.genres .genre div h3 {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    text-transform: capitalize;
+}
+.genres .genre div h4 {
+    font-size: clamp(0.87rem, 1.5vw, 1rem);
+    color: var(--color-dark-gray);
+}

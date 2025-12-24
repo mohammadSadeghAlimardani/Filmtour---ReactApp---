@@ -1,0 +1,18 @@
+.movie-center .genre-tags {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+@media screen and (max-width: 567px) {
+    .movie-center .genre-tags {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.movie-center .genre-tags li {
+    font-size: clamp(0.87rem, 2.5vw, 1rem);
+    padding: 0.75rem;
+    background-color: var(--color-light-gray);
+    border-radius: 1rem;
+}

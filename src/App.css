@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "Exo2-Regular";
+    src: url("./assets/fonts/Exo2-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "MeriendaOne-Regular";
+    src: url("./assets/fonts/MeriendaOne-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url("./assets/fonts/OpenSans-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "WorkSans-Regular";
+    src: url("./assets/fonts/WorkSans-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Rubik-Regular";
+    src: url("./assets/fonts/Rubik-Regular.ttf") format("truetype");
+}
+
+:root {
+    --main-bg: #091928;
+    --bg-secondary: #184165;
+
+    --color-white: #f9fbf2;
+    --color-orange: #f97516;
+    --color-red: #d60324;
+    --color-green: #248353;
+    --color-yellow: #f3db3a;
+    --color-blue: #006aed;
+    --color-light-gray: #f2f2f2;
+    --color-medium-gray: #cccfce;
+    --color-dark-gray: #989898;
+    --color-blue-gray: #63737f;
+    --color-black: #000000;
+}
+
+html {
+    font-family: "Roboto-Regular";
+    scroll-behavior: smooth;
+}
+
+button {
+    font-family: "Roboto-Regular";
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 0;
+    margin: 0;
+}
+.btn.btn-red {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+.btn.btn-blue {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+.btn.btn-white {
+    background-color: var(--color-white);
+    color: var(--color-blue);
+}
+
+/* ==== .section-title ==== */
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.section-title h2 {
+    text-transform: uppercase;
+    font-size: clamp(2rem, 3.5vw, 4rem);
+    color: var(--color-black);
+    margin-bottom: 1rem;
+}
+.section-title h2 span {
+    color: var(--color-dark-gray);
+}
+.section-title p {
+    font-family: "Rubik-Regular";
+    line-height: 1.4;
+    font-size: clamp(0.87rem, 1.5vw, 1rem);
+}

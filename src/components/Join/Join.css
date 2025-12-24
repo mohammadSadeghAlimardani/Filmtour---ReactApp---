@@ -1,0 +1,32 @@
+.join {
+    background-color: var(--color-blue);
+}
+.join-center {
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+    .join-center {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+.join-center article h2 {
+    line-height: 1.2;
+    font-size: clamp(2.5rem, 4.5vw, 6rem);
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+.join-center article p {
+    line-height: 1.4;
+    font-size: clamp(0.87rem, 1.5vw, 1rem);
+    text-transform: capitalize;
+    color: var(--color-white);
+    margin: 2rem 0;
+}
+.join-center svg.community-img {
+    font-size: clamp(7rem, 12vw, 12rem);
+    color: white;
+}

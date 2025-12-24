@@ -1,0 +1,11 @@
+.searched-movie-card {
+    text-align: center;
+}
+.searched-movie-card img {
+    width: 100%;
+    height: 14.25rem;
+}
+.searched-movie-card h3 {
+    margin: 0.75rem 0;
+    color: var(--color-black);
+}

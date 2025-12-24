@@ -1,0 +1,34 @@
+.bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background-color: var(--main-bg);
+}
+@media screen and (max-width: 567px) {
+    .bottom-nav {
+        display: block;
+    }
+}
+.bottom-nav-center {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bottom-nav-center a,
+.bottom-nav-center button {
+    font-size: 1rem;
+    text-transform: capitalize;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    color: var(--color-white);
+}
+.bottom-nav-center a svg,
+.bottom-nav-center button svg {
+    font-size: 1.5rem;
+}

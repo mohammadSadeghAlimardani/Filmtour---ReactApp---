@@ -1,0 +1,13 @@
+.about-center {
+    padding: 6rem 0;
+}
+.about-center .text p {
+    line-height: 1.4;
+    text-align: justify;
+    margin: 1rem 0;
+    font-size: clamp(0.87rem, 3.5vw, 1.25rem);
+    font-family: "Rubik-Regular";
+}
+.about-center .text p span {
+    color: #6739ce;
+}
