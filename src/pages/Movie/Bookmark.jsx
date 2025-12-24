@@ -40,7 +40,7 @@ const Bookmark = (props) => {
                     poster: poster,
                 },
             ]);
-            toast.info("you bookmarked the movie");
+            toast.success("you bookmarked the movie");
         } catch (error) {
             toast.error("Error bookmarking movie:", error);
         }

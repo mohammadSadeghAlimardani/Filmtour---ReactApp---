@@ -2,14 +2,18 @@ import "./Movie.css";
 import axios from "axios";
 import { useLoaderData } from "react-router-dom";
 import { useContext } from "react";
-import { AppContext } from "../../App";
 import Cast from "./Cast";
 import Bookmark from "./Bookmark";
-import Likes_Dislikes__count from "./Likes_Dislikes__count";
+import Likes_Dislikes__Count from "./Likes_Dislikes__Count";
 import GenreTags from "./GenreTags";
 import Details from "./Details";
+import { AppContext } from "../../App";
 
-const searchMovieByID_ULR = "https://api.themoviedb.org/3/movie/";
+import {
+    searchMovieByID_ULR,
+    originalMovieImageURL,
+    api_key,
+} from "../../data";
 
 export const loader = async ({ params }) => {
     const { id } = params;
@@ -17,16 +21,12 @@ export const loader = async ({ params }) => {
     try {
         //get credits info
         const creditsResponse = await axios.get(
-            `${searchMovieByID_ULR}${id}/credits?api_key=${
-                import.meta.env.VITE_API_KEY
-            }`
+            `${searchMovieByID_ULR}${id}/credits?api_key=${api_key}`
         );
 
         //get movie info
         const movieResponse = await axios.get(
-            `${searchMovieByID_ULR}${id}?api_key=${
-                import.meta.env.VITE_API_KEY
-            }`
+            `${searchMovieByID_ULR}${id}?api_key=${api_key}`
         );
 
         return {
@@ -69,9 +69,7 @@ const Movie = () => {
                     src={
                         backdrop_path === null
                             ? photoBlankSVG
-                            : `${
-                                  import.meta.env.VITE_ORIGINAL_MOVIE_IMAGE_URL
-                              }${backdrop_path}`
+                            : `${originalMovieImageURL}${backdrop_path}`
                     }
                     alt={original_title}
                 />
@@ -84,7 +82,7 @@ const Movie = () => {
                 <h1>{original_title}</h1>
                 <p className="overview">{overview}</p>
                 <GenreTags genres={genres} />
-                <Likes_Dislikes__count likes={likes} dislikes={dislikes} />
+                <Likes_Dislikes__Count likes={likes} dislikes={dislikes} />
                 <Cast cast={cast} />
                 <Bookmark
                     bookmarks={bookmarks}

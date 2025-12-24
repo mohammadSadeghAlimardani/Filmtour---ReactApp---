@@ -7,6 +7,8 @@ import { toast } from "react-toastify";
 import { useContext } from "react";
 import { AppContext } from "../../App";
 
+import { posterPathBaseURL } from "../../data";
+
 const SingleBookmark = (props) => {
     const { poster, title, id } = props;
 
@@ -34,10 +36,7 @@ const SingleBookmark = (props) => {
     return (
         <article className="bookmark" key={id}>
             <NavLink to={`/movie/${id}`}>
-                <img
-                    src={`${import.meta.env.VITE_POSTER_PATH}${poster}`}
-                    alt={title}
-                />
+                <img src={`${posterPathBaseURL}${poster}`} alt={title} />
             </NavLink>
             <ul>
                 <h3>{title}</h3>

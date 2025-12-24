@@ -4,10 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 
-const trendingMovieURL =
-    "https://api.themoviedb.org/3/trending/movie/day?api_key=";
-
-const originalMovieImageURL = "https://image.tmdb.org/t/p/original/";
+import { trendingMovieURL, originalMovieImageURL, api_key } from "../../data";
 
 const Hero = () => {
     const [trendMovie, setTrendMovie] = useState("");
@@ -15,9 +12,7 @@ const Hero = () => {
     const { data } = useQuery({
         queryKey: ["trendMovie"],
         queryFn: async () => {
-            const response = await axios.get(
-                `${trendingMovieURL}${import.meta.env.VITE_API_KEY}`
-            );
+            const response = await axios.get(`${trendingMovieURL}${api_key}`);
             return response.data;
         },
     });
@@ -35,9 +30,7 @@ const Hero = () => {
         <div
             className="hero"
             style={{
-                background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${
-                    import.meta.env.VITE_ORIGINAL_MOVIE_IMAGE_URL
-                }${backdrop_path}) 50% 50%/cover`,
+                background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${originalMovieImageURL}${backdrop_path}) 50% 50%/cover`,
             }}
         >
             <div className="section-center hero-center">

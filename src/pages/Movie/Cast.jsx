@@ -3,6 +3,8 @@ import picProfile from "../../assets/images/pic-profile.svg";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
+import { posterPathBaseURL } from "../../data";
+
 const Cast = (props) => {
     const { cast } = props;
 
@@ -24,9 +26,7 @@ const Cast = (props) => {
                                 src={
                                     profile_path === null
                                         ? picProfile
-                                        : `${
-                                              import.meta.env.VITE_POSTER_PATH
-                                          }${profile_path}`
+                                        : `${posterPathBaseURL}${profile_path}`
                                 }
                                 alt={original_name}
                             />

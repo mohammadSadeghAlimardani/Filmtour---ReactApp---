@@ -1,4 +1,4 @@
-import "./Likes_Dislikes__count.css";
+import "./Likes_Dislikes__Count.css";
 import { BiSolidLike } from "react-icons/bi";
 import { BiSolidDislike } from "react-icons/bi";
 

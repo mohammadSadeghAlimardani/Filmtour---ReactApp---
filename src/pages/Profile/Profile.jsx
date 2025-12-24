@@ -12,7 +12,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Profile = () => {
-    const { user, setUser, bookmarks } = useContext(AppContext);
+    const { user, setUser } = useContext(AppContext);
 
     const navigate = useNavigate();
 

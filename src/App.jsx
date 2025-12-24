@@ -70,8 +70,6 @@ const App = () => {
     );
     const [bookmarks, setBookmarks] = useState([]);
 
-    const api_key = "db3a4cce64586fb42c5c2fb8aeaf04a0";
-
     const getUserBookmarks = async () => {
         if (!user) return [];
 
@@ -96,9 +94,7 @@ const App = () => {
     }, [user]);
 
     return (
-        <AppContext.Provider
-            value={{ api_key, user, setUser, bookmarks, setBookmarks }}
-        >
+        <AppContext.Provider value={{ user, setUser, bookmarks, setBookmarks }}>
             <ToastContainer position="top-center" autoClose={1500} />
             <RouterProvider router={router} />
         </AppContext.Provider>

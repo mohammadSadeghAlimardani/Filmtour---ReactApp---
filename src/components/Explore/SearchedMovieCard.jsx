@@ -2,6 +2,8 @@ import "./SearchedMovieCard.css";
 import photoBlankSVG from "../../assets/images/video.svg";
 import { NavLink } from "react-router-dom";
 
+import { posterPathBaseURL } from "../../data";
+
 const SearchedMovieCard = (props) => {
     const { backdrop_path, id, original_title } = props;
 
@@ -11,7 +13,7 @@ const SearchedMovieCard = (props) => {
                 src={
                     backdrop_path === null
                         ? photoBlankSVG
-                        : `${import.meta.env.VITE_POSTER_PATH}${backdrop_path}`
+                        : `${posterPathBaseURL}${backdrop_path}`
                 }
                 alt={original_title}
             />

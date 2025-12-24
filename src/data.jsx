@@ -112,3 +112,24 @@ const questions = [
 ];
 
 export { questions };
+
+const searchMovieByID_ULR = "https://api.themoviedb.org/3/movie/";
+const originalMovieImageURL = "https://image.tmdb.org/t/p/original/";
+const searchMovieByNameURL = "https://api.themoviedb.org/3/search/movie?query=";
+const posterPathBaseURL = "https://image.tmdb.org/t/p/w500/";
+const trendingMovieURL =
+    "https://api.themoviedb.org/3/trending/movie/day?api_key=";
+const popularMoviesURL = "https://api.themoviedb.org/3/movie/popular?api_key=";
+const searchCharacterByID_URL = "https://api.themoviedb.org/3/person/";
+const api_key = "db3a4cce64586fb42c5c2fb8aeaf04a0";
+
+export {
+    searchMovieByID_ULR,
+    originalMovieImageURL,
+    searchMovieByNameURL,
+    posterPathBaseURL,
+    trendingMovieURL,
+    popularMoviesURL,
+    searchCharacterByID_URL,
+    api_key,
+};

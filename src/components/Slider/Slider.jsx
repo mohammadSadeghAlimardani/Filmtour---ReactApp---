@@ -8,7 +8,7 @@ import Carousel from "./Carousel";
 import CarouselIndicators from "./CarouselIndicators";
 import SectionTitle from "../SectionTitle";
 
-const popularMoviesURL = "https://api.themoviedb.org/3/movie/popular?api_key=";
+import { popularMoviesURL, api_key } from "../../data";
 
 const Slider = () => {
     const [pouplarMovies, setPopularMovies] = useState([]);
@@ -17,9 +17,7 @@ const Slider = () => {
     const { data, isLoading, isError, error } = useQuery({
         queryKey: ["pouplarMovies"],
         queryFn: async () => {
-            const response = await axios.get(
-                `${popularMoviesURL}${import.meta.env.VITE_API_KEY}`
-            );
+            const response = await axios.get(`${popularMoviesURL}${api_key}`);
             return response.data;
         },
     });

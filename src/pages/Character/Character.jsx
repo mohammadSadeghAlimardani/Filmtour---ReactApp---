@@ -3,15 +3,18 @@ import axios from "axios";
 import { useLoaderData } from "react-router-dom";
 import picProfileSVG from "../../assets/images/pic-profile.svg";
 
-const searchCharacterByID_URL = "https://api.themoviedb.org/3/person/";
+import {
+    searchCharacterByID_URL,
+    posterPathBaseURL,
+    api_key,
+} from "../../data";
 
 export const loader = async ({ params }) => {
     const { id } = params;
+
     try {
         const response = await axios.get(
-            `${searchCharacterByID_URL}${id}?api_key=${
-                import.meta.env.VITE_API_KEY
-            }`
+            `${searchCharacterByID_URL}${id}?api_key=${api_key}`
         );
         return response.data;
     } catch (error) {
@@ -33,9 +36,7 @@ const Character = () => {
                     src={
                         profile_path === null
                             ? picProfileSVG
-                            : `${
-                                  import.meta.env.VITE_POSTER_PATH
-                              }${profile_path}`
+                            : `${posterPathBaseURL}${profile_path}`
                     }
                     alt=""
                 />

@@ -1,0 +1,10 @@
+.error-center {
+    padding: 6rem 0;
+}
+.error-center img {
+    width: 100%;
+    height: auto;
+}
+.error-center p {
+    text-transform: capitalize;
+}

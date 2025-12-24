@@ -1,6 +1,8 @@
 import "./CarouselCell.css";
 import { NavLink } from "react-router-dom";
 
+import { posterPathBaseURL } from "../../data";
+
 const CarouselCell = (props) => {
     const { poster_path, original_title, id, index, count } = props;
 
@@ -11,7 +13,7 @@ const CarouselCell = (props) => {
             style={{ transform: `translateX(${(count + index) * 110}%)` }}
         >
             <img
-                src={`${import.meta.env.VITE_POSTER_PATH}${poster_path}`}
+                src={`${posterPathBaseURL}${poster_path}`}
                 alt={original_title}
             />
             <h3>{original_title}</h3>

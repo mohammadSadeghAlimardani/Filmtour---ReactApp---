@@ -6,7 +6,7 @@ import SectionTitle from "../SectionTitle";
 import Genres from "./Genres";
 import FoundedMovies from "./FoundedMovies";
 
-const searchMovieByNameURL = "https://api.themoviedb.org/3/search/movie?query=";
+import { searchMovieByNameURL, api_key } from "../../data";
 
 const Explore = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -15,9 +15,7 @@ const Explore = () => {
         queryKey: ["search", searchTerm],
         queryFn: async () => {
             const response = await axios.get(
-                `${searchMovieByNameURL}${searchTerm}&api_key=${
-                    import.meta.env.VITE_API_KEY
-                }`
+                `${searchMovieByNameURL}${searchTerm}&api_key=${api_key}`
             );
             return response.data.results;
         },
