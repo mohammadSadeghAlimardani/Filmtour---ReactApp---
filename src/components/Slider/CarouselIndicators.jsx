@@ -2,13 +2,17 @@ import "./CarouselIndicators.css";
 import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 
 const CarouselIndicators = (props) => {
-    const { setCount, count } = props;
+    const { setCount, count, sizeOfPopularMovies } = props;
 
     const increaseCount = () => {
-        setCount(count + 1);
+        if (count !== 0) {
+            setCount(count + 1);
+        }
     };
     const decreaseCount = () => {
-        setCount(count - 1);
+        if (count * -1 < sizeOfPopularMovies - 1) {
+            setCount(count - 1);
+        }
     };
 
     return (

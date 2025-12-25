@@ -45,7 +45,11 @@ const Slider = () => {
                 />
                 <section className="carousel-container">
                     <Carousel pouplarMovies={pouplarMovies} count={count} />
-                    <CarouselIndicators setCount={setCount} count={count} />
+                    <CarouselIndicators
+                        sizeOfPopularMovies={pouplarMovies.length}
+                        setCount={setCount}
+                        count={count}
+                    />
                 </section>
             </div>
         </div>
