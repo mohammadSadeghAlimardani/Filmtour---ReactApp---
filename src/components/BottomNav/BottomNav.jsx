@@ -3,11 +3,13 @@ import { NavLink } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import { RiPlayList2Fill } from "react-icons/ri";
 import { RiPagesFill } from "react-icons/ri";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import PagesSubmenu from "./PagesSubmenu";
+import { AppContext } from "../../App";
 
 const BottomNav = () => {
     const [showPagesSubmenu, setShowPageSubmenu] = useState(false);
+    const { user } = useContext(AppContext);
 
     return (
         <>
@@ -17,7 +19,7 @@ const BottomNav = () => {
                         <AiFillHome />
                         <span>home</span>
                     </NavLink>
-                    <NavLink to="/">
+                    <NavLink to={user ? "/playlist" : "/register"}>
                         <RiPlayList2Fill />
                         <span>playlist</span>
                     </NavLink>
