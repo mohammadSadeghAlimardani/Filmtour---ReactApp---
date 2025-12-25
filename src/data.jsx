@@ -103,12 +103,6 @@ const questions = [
         answerText:
             "Yes, you can browse movies without logging in, but some features (like bookmarks) require an account.",
     },
-    {
-        questionID: 8,
-        questionText: "How can I contact support ?",
-        answerText:
-            "You can reach us through the Contact Us page. We’ll be happy to help you.",
-    },
 ];
 
 export { questions };
