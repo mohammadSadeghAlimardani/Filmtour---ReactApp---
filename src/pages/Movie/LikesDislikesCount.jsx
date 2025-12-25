@@ -1,8 +1,8 @@
-import "./Likes_Dislikes__Count.css";
+import "./LikesDislikesCount.css";
 import { BiSolidLike } from "react-icons/bi";
 import { BiSolidDislike } from "react-icons/bi";
 
-const Likes_Dislikes__Count = (props) => {
+const LikesDislikesCount = (props) => {
     const { likes, dislikes } = props;
 
     return (
@@ -23,4 +23,4 @@ const Likes_Dislikes__Count = (props) => {
     );
 };
 
-export default Likes_Dislikes__Count;
+export default LikesDislikesCount;

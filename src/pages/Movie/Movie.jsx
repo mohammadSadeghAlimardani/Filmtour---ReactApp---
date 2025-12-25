@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import { useContext } from "react";
 import Cast from "./Cast";
 import Bookmark from "./Bookmark";
-import Likes_Dislikes__Count from "./Likes_Dislikes__Count";
+import LikesDislikesCount from "./LikesDislikesCount";
 import GenreTags from "./GenreTags";
 import Details from "./Details";
 import { AppContext } from "../../App";
@@ -82,7 +82,7 @@ const Movie = () => {
                 <h1>{original_title}</h1>
                 <p className="overview">{overview}</p>
                 <GenreTags genres={genres} />
-                <Likes_Dislikes__Count likes={likes} dislikes={dislikes} />
+                <LikesDislikesCount likes={likes} dislikes={dislikes} />
                 <Cast cast={cast} />
                 <Bookmark
                     bookmarks={bookmarks}
